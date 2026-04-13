@@ -419,6 +419,31 @@ code {
   color: var(--muted);
 }
 
+.team-member__resume-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 46px;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  border-radius: var(--radius-btn);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.team-member__resume-btn:hover {
+  background: var(--bg-page);
+  border-color: #000000;
+  color: var(--text);
+  text-decoration: none;
+}
+
 /* Tutorial steps — card stack like in-app panels */
 .steps {
   counter-reset: step;
