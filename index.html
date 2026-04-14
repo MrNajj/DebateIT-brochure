@@ -6,11 +6,12 @@
     <title>About — DebateIt</title>
     <link rel="icon" href="assets/tabLogo.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="js/lightbox.js" defer></script>
   </head>
   <body>
     <header class="site-header">
       <div class="site-header__inner">
-        <a class="logo" href="index.html"><img src="assets/logo.jpg" alt="Debate It — home" width="160" height="40" /></a>
+        <a class="logo" href="index.html"><img src="assets/logo.jpg" alt="Debate It — home" width="176" height="44" /></a>
         <nav aria-label="Main">
           <ul>
             <li><a href="index.html" aria-current="page">About</a></li>
@@ -36,7 +37,7 @@
 
       <div class="callout">
         <p>
-          <strong>Source code</strong> for this capstone project lives in a <strong>private</strong> repository. This brochure site is public and only links to the product you choose to deploy—not to the repo itself.
+          <strong>Source code</strong> for this capstone project lives in a <strong>private</strong> repository. This brochure site is public and only links to the platform that is deployed.
         </p>
       </div>
 
@@ -91,13 +92,99 @@
 
       <h2>Product screenshots</h2>
       <p>
-        Add two or three PNG or JPG screenshots from your deployed app (or local dev) so reviewers see the real UI. Save them under <code>assets/</code> and reference them here—for example <code>assets/screenshot-home.png</code>.
+        Views from the DebateIt web app: discover content, open debates, organize groups, and adjust settings.
+        <strong>Select an image</strong> for a full-size view (or open it in a new tab if scripts are unavailable).
       </p>
-      <figure class="figure">
-        <p class="caption" style="margin: 0">
-          <em>Placeholder:</em> insert <code>&lt;img src="assets/your-screenshot.png" alt="…" /&gt;</code> when ready.
-        </p>
-      </figure>
+      <div class="screenshot-grid" role="region" aria-label="DebateIt interface screenshots">
+        <figure class="figure">
+          <a
+            class="screenshot-thumb"
+            href="assets/Discover.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-lightbox
+            aria-label="Open Discover screenshot at full size"
+          >
+            <img
+              src="assets/Discover.png"
+              alt="DebateIt Discover screen: browsing and finding debates to join"
+              width="3126"
+              height="1990"
+              loading="lazy"
+            />
+          </a>
+          <figcaption class="caption">Discover — browse and find debates.</figcaption>
+        </figure>
+        <figure class="figure">
+          <a
+            class="screenshot-thumb"
+            href="assets/Debates.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-lightbox
+            aria-label="Open Debates screenshot at full size"
+          >
+            <img
+              src="assets/Debates.png"
+              alt="DebateIt Debates screen showing debate listings and participation"
+              width="3126"
+              height="1990"
+              loading="lazy"
+            />
+          </a>
+          <figcaption class="caption">Debates — join and follow structured discussions.</figcaption>
+        </figure>
+        <figure class="figure">
+          <a
+            class="screenshot-thumb"
+            href="assets/Groups.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-lightbox
+            aria-label="Open Groups screenshot at full size"
+          >
+            <img
+              src="assets/Groups.png"
+              alt="DebateIt Groups screen for communities and group activity"
+              width="3126"
+              height="1990"
+              loading="lazy"
+            />
+          </a>
+          <figcaption class="caption">Groups — communities around shared interests.</figcaption>
+        </figure>
+        <figure class="figure">
+          <a
+            class="screenshot-thumb"
+            href="assets/Settings.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-lightbox
+            aria-label="Open Settings screenshot at full size"
+          >
+            <img
+              src="assets/Settings.png"
+              alt="DebateIt Settings screen for account and app preferences"
+              width="3126"
+              height="1990"
+              loading="lazy"
+            />
+          </a>
+          <figcaption class="caption">Settings — account and preferences.</figcaption>
+        </figure>
+      </div>
+
+      <dialog class="lightbox" id="screenshot-lightbox" aria-label="Enlarged app screenshot">
+        <div class="lightbox__scrim">
+          <div class="lightbox__panel">
+            <form method="dialog" class="lightbox__close-form">
+              <button type="submit" class="lightbox__close" aria-label="Close enlarged screenshot">Close</button>
+            </form>
+            <img class="lightbox__img" src="" alt="" width="3126" height="1990" />
+            <p class="lightbox__caption"></p>
+          </div>
+        </div>
+      </dialog>
     </main>
 
     <footer class="site-footer">
